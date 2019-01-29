@@ -1,4 +1,27 @@
+/*Default design for mobile*/
+
 html {
 	width: 100%;
 	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100%;
+	height: 150px;
+	background-color: #450000;
+}
+
+#first-section {
+	width: 100%;
+	height: 700px;
+	background-color: #fec832b3;
 }
