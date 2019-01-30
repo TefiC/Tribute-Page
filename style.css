@@ -104,6 +104,31 @@ a {
     justify-self: center;
 }
 
+.main-image:hover {
+
+	animation-name: large-image;
+	animation-duration: 3.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes large-image {
+
+	25% {
+		transform: rotate(-10deg);
+	}
+
+	60% {
+		transform: scale(1.2) rotate(5deg);
+		box-shadow: 1px 7px 16px 1px #000000b5;
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
 h1 {
 	width: 100%;
 	text-align: center;
