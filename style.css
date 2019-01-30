@@ -87,7 +87,7 @@ a {
 	height: 100%;
 	width: 100%;
 	margin: 10px;
-	max-width: 570px; 
+	max-width: 380px; 
 
 	display: flex;
 	flex-wrap: wrap;
@@ -114,49 +114,46 @@ h1 {
 
 /* Section 2 - Card Items*/
 
-/* First item */
-.content-header-first {
+.content-header {
 	width: 100%;
 	height: 60px;
 	margin-bottom: 10px;
-	background-color: blue;
+	border-radius: 5%;
+
+	/*Text*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+
 }
 
-.content-text-first {
+.content-text {
+	background-color: white;
 	width: 100%;
 	height: 300px;
 	margin-bottom: 10px;
-	background-color: green;
+	box-shadow: 0px 0px 12px 0px #0000006b;
+	border-radius: 5%;
+}
+
+/* First item */
+.content-header-first {
+	background-color: #0075ff;
 }
 
 /* Second item */
 .content-header-second {
-	width: 100%;
-	height: 60px;
-	margin-bottom: 10px;
-	background-color: green;
-}
-
-.content-text-second {
-	width: 100%;
-	height: 300px;
-	margin-bottom: 10px;
-	background-color: blue;
+	background-color: #2b2b16;
 }
 
 /* Third item*/
 .content-header-third {
-	width: 100%;
-	height: 60px;
-	margin-bottom: 10px;
-	background-color: blue;
-}
-
-.content-text-third {
-	width: 100%;
-	height: 300px;
-	margin-bottom: 10px;
-	background-color: green;
+	background-color: #0075ff;
 }
 
 /* Footer */
@@ -175,7 +172,7 @@ footer {
 	}
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 650px) {
 
 	/* Use a CSS grid for larger devices*/
 
@@ -197,10 +194,13 @@ footer {
 
 	/* Section 2 - Card Items */
 
+	.content-header {
+		height: 70px;
+	}
+
 	/*First item*/
 	.content-header-first {
 		grid-area: header1;
-		height: 70px;
 	}
 
 	.content-text-first {
@@ -210,7 +210,6 @@ footer {
 	/*Second item*/
 	.content-header-second {
 		grid-area: header2;
-		height: 70px;
 	}
 
 	.content-text-second {
@@ -220,10 +219,15 @@ footer {
 	/*Third item*/
 	.content-header-third {
 		grid-area: header3;
-		height: 70px;
 	}
 
 	.content-text-third {
 		grid-area: content3;
 	}
+
+	/*Grid container*/
+	.grid-content-container {
+		max-width: 700px;
+	}
+
 }
