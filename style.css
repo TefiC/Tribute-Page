@@ -16,12 +16,42 @@ body {
 
 header {
 	width: 100%;
-	height: 150px;
-	background-color: #450000;
+	height: 70px;
+	background-color: #0075ff;
 }
 
-#first-section {
+.section {
 	width: 100%;
-	height: 700px;
-	background-color: #fec832b3;
+	height: 450px;
+	display: flex;
+	justify-content: center;
+}
+
+.white-section {
+	background-color: white;
+}
+
+.gray-section {
+	background-color: #d5d0d045;
+}
+
+.content-container {
+	height: 100%;
+	width: 100%;
+	margin: 10px;
+	max-width: 500px;
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+	background-color: #0075ff;
+}
+
+/*Medium and Large devices*/
+
+@media screen and (min-width: 450px) {
+	header {
+		height: 50px;
+	}
 }
