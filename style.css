@@ -1,4 +1,4 @@
-/*Default design for mobile*/
+/* Default design for mobile */
 
 html {
 	width: 100%;
@@ -14,7 +14,7 @@ body {
 	padding: 0;
 }
 
-/*Header*/
+/* ---- Header*/
 
 header {
 	width: 100%;
@@ -39,7 +39,7 @@ a {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*Hover animation*/
+/* Hover animation */
 .nav-link:hover {
 	animation-name: nav-hover;
 	animation-duration: 1s;
@@ -52,22 +52,11 @@ a {
 	}
 }
 
-/*Main section*/
-
-h1 {
-	width: 100%;
-	text-align: center;
-	font-size: 36px;
-	font-family: 'Kaushan Script', cursive;
-	margin-bottom: 5px;
-}
-
-/*Main Elements*/
+/* ---- Main Content Sections*/
 
 .section {
 	width: 100%;
-	height: 450px;
-	padding: 10px;
+	padding-top: 20px;
 	display: flex;
 	margin-bottom: 20px;
 	justify-content: center;
@@ -98,20 +87,13 @@ h1 {
 	height: 100%;
 	width: 100%;
 	margin: 10px;
-	max-width: 700px;
+	max-width: 570px; 
 
-	/*CCSS Grid*/
-	display: grid;
-	grid-template-rows: 80px 320px;
-	grid-template-columns: 150px;
-	grid-gap: 10px;
-
-	grid-template-areas: 
-		"header1  header2  header3"
-		"content1 content2 content3"
+	display: flex;
+	flex-wrap: wrap;
 }
 
-/*Section 1 Image and Title*/
+/* Section 1 - Image and Title */
 
 .main-image {
 	width: 250px;
@@ -122,42 +104,62 @@ h1 {
     justify-self: center;
 }
 
-/*Section 2 Card Items*/
+h1 {
+	width: 100%;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Kaushan Script', cursive;
+	margin-bottom: 5px;
+}
 
-/*Left item*/
-.content-header-left {
-	grid-area: header1;
+/* Section 2 - Card Items*/
+
+/* First item */
+.content-header-first {
+	width: 100%;
+	height: 60px;
+	margin-bottom: 10px;
 	background-color: blue;
 }
 
-.content-text-left {
-	grid-area: content1;
+.content-text-first {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 10px;
 	background-color: green;
 }
 
-/*Center item*/
-.content-header-center {
-	grid-area: header2;
+/* Second item */
+.content-header-second {
+	width: 100%;
+	height: 60px;
+	margin-bottom: 10px;
 	background-color: green;
 }
 
-.content-text-center {
-	grid-area: content2;
+.content-text-second {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 10px;
 	background-color: blue;
 }
 
-/*Right item*/
-.content-header-right {
-	grid-area: header3;
+/* Third item*/
+.content-header-third {
+	width: 100%;
+	height: 60px;
+	margin-bottom: 10px;
 	background-color: blue;
 }
 
-.content-text-right {
-	grid-area: content3;
+.content-text-third {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 10px;
 	background-color: green;
 }
 
-/*Footer*/
+/* Footer */
 
 footer {
 	width: 100%;
@@ -165,10 +167,63 @@ footer {
 	background-color: #0075ff;
 }
 
-/*Medium and Large devices*/
+/* ------- Media Queries for Very Small, Medium and Large devices*/
 
 @media screen and (min-width: 450px) {
 	header {
 		height: 50px;
+	}
+}
+
+@media screen and (min-width: 560px) {
+
+	/* Use a CSS grid for larger devices*/
+
+	.grid-content-container {
+	height: 100%;
+	width: 100%;
+	margin: 10px;
+	max-width: 700px;
+
+	display: grid;
+	grid-template-rows: 80px 320px;
+	grid-template-columns: 32% 33% 32%;
+	grid-gap: 10px;
+
+	grid-template-areas: 
+		"header1  header2  header3"
+		"content1 content2 content3"
+	}
+
+	/* Section 2 - Card Items */
+
+	/*First item*/
+	.content-header-first {
+		grid-area: header1;
+		height: 70px;
+	}
+
+	.content-text-first {
+		grid-area: content1;
+	}
+
+	/*Second item*/
+	.content-header-second {
+		grid-area: header2;
+		height: 70px;
+	}
+
+	.content-text-second {
+		grid-area: content2;
+	}
+
+	/*Third item*/
+	.content-header-third {
+		grid-area: header3;
+		height: 70px;
+	}
+
+	.content-text-third {
+		grid-area: content3;
 	}
 }
